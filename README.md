@@ -6,18 +6,17 @@ Very basic config for running dltn_metadata_qa with Docker
 Installing
 ----------
 
-docker-compose --build
-
-
-Running
--------
-
-docker-compose up -d
+docker-compose up --build
 
 Stopping
 --------
 
 docker-compose down
+
+Running after initial build
+---------------------------
+
+docker-compose up -d
 
 Using QA
 --------
