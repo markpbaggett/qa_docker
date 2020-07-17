@@ -1,0 +1,20 @@
+version: '3.4'
+
+services:
+  dltn_qa:
+    build:
+      context: ./dltn_metadata_qa
+    depends_on:
+      - mongo
+    stdin_open: true
+    tty: true
+    container_name: qa_python
+  mongo:
+    image: mongo:4.2.8-bionic
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo_data:/data
+    container_name: qa_mongo
+volumes:
+  mongo_data:
